@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <script type = 'text/javascript' >
+        var appInsights=window.appInsights||function(config)
+        {
+            function r(config){ t[config] = function(){ var i = arguments; t.queue.push(function(){ t[config].apply(t, i)})} }
+            var t = { config:config},u=document,e=window,o='script',s=u.createElement(o),i,f;for(s.src=config.url||'//az416426.vo.msecnd.net/scripts/a/ai.0.js',u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=['Event','Exception','Metric','PageView','Trace','Ajax'];i.length;)r('track'+i.pop());return r('setAuthenticatedUserContext'),r('clearAuthenticatedUserContext'),config.disableExceptionTracking||(i='onerror',r('_'+i),f=e[i],e[i]=function(config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o),s}),t
+        }({
+            instrumentationKey:'f301116a-8f7a-4455-9a5f-ca284b033a3a'
+        });
+        
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Western Canada Business Technologies", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">                 
+                <ul class="nav navbar-nav">
+                    <li><a button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false" id="menu-bar" href="/Home/Index" alt="WCBIZTECH Home Page" target="_blank">Home</a></li>
+                    @*
+    <li><a href="/Home/Index" alt="WCBIZTECH Home Page" target="_blank">Home </a></li>
+                    *@
+                    <li><a button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false" id="menu-bar" href="/Home/About" alt="WCBIZTECH About Page" target="_blank">About </a></li>
+                   @*
+    <li><a href="/Home/About" alt="WCBIZTECH About Page" target="_blank">About </a></li>
+                *@
+                  <li><a button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false" id="menu-bar" href="/Contacts/Create" alt="WCBIZTECH Contact Page" target="_blank">Contact Us</a></li>
+                  @*
+    <li><a href="/Contacts/Create" alt="WCBIZTECH Contact Page" target="_blank">Contact Us </a></li>
+                *@
+   
+                    
+
+                   
+                </ul>
+               
+                
+
+                <div class="btn-group">
+
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: black; Color: darkgray; margin-top:10px">
+                        Our Services <span class="caret"></span>
+                    </button>
+
+
+                    <ul class="dropdown-menu">
+                        <li><a href="/Offerings/ApplicationInnovation">Application Innovation</a></li>
+                        <li><a href="/Offerings/ApplicationsDevelopment">Application Development</a></li>
+                        <li><a href="/Offerings/DataInsight">Data Insight</a></li>
+                        <li><a href="/Offerings/EnterpriseMobility">Enterprise Mobility</a></li>
+                        <li><a href="/Offerings/TransformDatacenter">Datacenter Transformation</a></li>
+                        <li><a href="/Offerings/WebHosting">Web Hosting</a></li>
+                        <li><a href="/Offerings/BusinessAnalysis">Business Analysis</a></li>
+
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                    <a button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false" style="background-color: black; Color: darkgray; margin-top:10px" href="http://wcbiztechwpapp.azurewebsites.net/" alt="WCBIZTECH Blog" target="_blank">Blog</a>
+                </div>                            
+   
+                    @*
+            @Html.Partial("_LoginPartial")
+                    *@
+                </div>
+                  
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <br />
+            <hr />
+
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 class="footer-content"><strong>Contact Details:</strong></h4>
+                        <h4 class="footer-content"><strong><i>Address:</i></strong></h4>
+
+                        <address class="footer-content">
+                            42, 32 Whitnel Court, N.E,<br />
+                            Calgary, Alberta T1Y 5E3,<br />
+                            Canada.
+                        </address>
+                        <div class="footer-content">
+                            <h4><strong><i>Email:</i></strong></h4>
+                            wcbizconsulting@gmail.com <br />
+                            info@wcbizc.com. <br />
+                            Cell: 1-403-771-1264 <br />
+                            <br />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4><strong>Our Services</strong></h4><br />
+                        <p>  @Html.ActionLink("Custom Software Applications Development", "ApplicationsDevelopment", "Offerings")<br /></p>
+                        <p>  @Html.ActionLink("Implementation of Commercial Off-The-Shelf (COT)   Applications", "ApplicationsDevelopment", "Offerings")<br /></p>
+                        <p> @Html.ActionLink("Business Analysis/Microsoft Dynamics CRM Functional Analyses", "BusinessAnalysis", "Offerings")<br /></p>
+                        <p> @Html.ActionLink("Web Design & Hosting", "WebHosting", "Offerings")<br /></p>
+
+                    </div>
+
+
+
+                    <div class="col-md-3">
+                        <h4><strong>Who We Are</strong></h4><br />
+                        <p>  @Html.ActionLink("Our Mission", "OurMission", "Offerings")<br /></p>
+                        <p>  @Html.ActionLink("Our Core Values", "CoreValues", "Offerings")<br /></p>
+                        <p> @Html.ActionLink("Our Business Philosophy", "Philosophy", "Offerings")<br /></p>
+                        <p>@Html.ActionLink("Home", "Index", "Home")</p>
+                        <p>@Html.ActionLink("Business Inquiry form", "Create", "SoftwareServiceRequests")</p>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4><strong>Connect With Us</strong></h4><br />
+                        <p>  <a href="https://www.facebook.com/wcbiztech/" alt="WCBIZTECH FaceBook Page">Facebook</a><br /></p>
+                        <p>  <a href="https://www.linkedin.com/in/western-canada-business-technologies-557a96a0?" alt="WCBIZTECH LinkedIn Page">LinkedIn</a><br /></p>
+                        <p>  <a href="https://mobile.twitter.com/wcbizconsulting" alt="WCBIZTECH Twitter Page"> Twitter    </a><br /></p>
+                        @*<p>  <a href="" alt="WCBIZTECH Instagram Page">Instagram</a><br /></p>*@
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <p class="copyrightsignature"> &copy; @DateTime.Now.Year - Western Canada Business Technologies. All rights reserved.</p>
+                </div>
+
+            </footer>
+
+
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

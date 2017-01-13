@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="my-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#my-carousel" data-slide-to="0" class="active">WCBIZTECH</li>
+        <li data-target="#my-carousel" data-slide-to="1"></li>
+        <li data-target="#my-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img alt="First slide" src="~/Images/Cloudservice-2.jpg">
+            <div class="carousel-caption">
+                <a href="/Offerings/DigitalTransformation"><h3 style="color: white">Digital Transformation</h3></a>
+                <p></p>
+            </div>
+        </div>
+        <div class="item">
+            <img alt="Second slide" src="~/Images/CloudServ-2.jpg">
+            <div class="carousel-caption">
+                <a href="/Offerings/ApplicationsDevelopment"><h3 style="color: white">Application Innovation</h3></a>
+                <p><h4></h4></p>
+            </div>
+        </div>
+        <div class="item">
+            <img alt="Third slide" src="~/Images/CloudServ-1.jpg">
+            <div class="carousel-caption">
+              <a href="/Offerings/ApplicationsDevelopment" style="color: black"><h3> Dot Net Developers</h3></a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img alt="Third slide" src="~/Images/Cloudservice-1.jpg">
+            <div class="carousel-caption">
+                <h3>Microsoft Partners</h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*
+    <!-- Controls -->
+    <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+       <a class="left carousel-control" href="#my-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#my-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+*@
+
+
+<br />
+<div class="row">
+    <div class="firstpageleftbox col-md-3">
+        <br />
+        <p><h4><strong><i>What we offer:</i></strong></h4></p>
+        <br />
+
+
+
+        <p><h4>  @Html.ActionLink("Digital Transformation", "DigitalTransformation", "Offerings")</h4></p>
+        <p>
+            Whether it is physical network infrastructure, on-premises servers, applications development and hosting, sales, inventory management, operations management, identity and access management, to name a few, going digital offers greater productivity at reduced costs.
+            <a class="btn btn-default" href="/Offerings/DigitalTransformation">Learn more &raquo;</a>
+        </p>
+
+        <p><h4>  @Html.ActionLink("Application Development & Web Hosting", "ApplicationsDevelopment", "Offerings")</h4></p>
+        <p>
+            Why would you change your business processes to suite your new Software Application when you can develop Applications that suite your business processes?  If you can define it, we can code it.
+            <a class="btn btn-default" href="/Offerings/ApplicationsDevelopment">Learn more &raquo;</a>
+
+        </p>
+
+
+        <p><h4>  @Html.ActionLink("Data Insight", "DataInsight", "Offerings")</h4></p>
+        <p>
+            Large streams of data could be so dumb and complicated.  You could, however, make your data speak through Analytics. With Data Analytics tools from Microsoft, you could improve your effciency through data insights.
+            <a class="btn btn-default" href="/Offerings/DataInsight">Learn more &raquo;</a>
+        </p>
+
+
+        <p><h4> @Html.ActionLink("Business Analysis/Microsoft Dynamics CRM Functional Analyses", "Index", "Offerings")</h4></p>
+        <p>
+            And, if you do not know which option is better for your business needs - Custom Developed or Commercial Off-The-Shelf Applications, we can help. Our Business Analyses services would match your business needs with the appropriate solution package.
+            <a class="btn btn-default" href="/Offerings/Index">Learn more &raquo;</a>
+        </p>
+        @*
+    <p><h4> @Html.ActionLink("")</h4></p>
+    <p>
+        Giving your business a professionally designed presence on the web need not be at a cut-throat price.  We take the burden off of you.
+        <a class="btn btn-default" href="/Offerings/WebHosting">Learn more &raquo;</a>
+    </p>
+        *@
+
+    </div>
+
+    <div class="row col-md-9">
+        <h3 id="welcomemessage"> Welcome to the world of Digital Transformation!</h3>
+        <p>With a software-defined datacenter, you gain the ability to manage diverse hardware as a unified resource pool. You get greater flexibility and more resilience. That’s the big thing we’re learning from cloud—that to respond rapidly to the demands of the business, you have to move away from a highly-customized infrastructure to a standardized, automated infrastructure. <a href="/Offerins/DigitalTransformation">Read more.</a> </p>
+        <p>
+        <p>
+            For your Software Applications Development, Business Analyses, Web Design and Hosting needs, migration of applicatioins and databases to the Cloud, and virtualization of your Office network infrastructure, we can help. If you would complete this
+            @Html.ActionLink("Business Information Form", "Create", "SoftwareServiceRequests") we will get back to you as soon as possible.
+        </p>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Data Insights</h3>
+                <p>
+                <p>
+                    Unlock insights on any data – You and your employees can not only capitalize on all the data your organization is capturing from customers and end users, but also capitalize on the promise of big data – and tap into external data to uncover insights that were previously hidden.  The key here is getting that power in the hands of people who are closest to your customers – the people in your company who need to make decisions about your business on a day-to-day basis.
+
+                    @Html.ActionLink("Read More", "DataInsight", "Offerings")
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h3>Cloud Migration</h3>
+                <p>
+                    The Cloud is here. It is a paradigm shift in information technology. It is the Cloud-First, Mobile-First era.  The power of social media, mobile devices, globalization and demand for real-time information access have made traditional Data and Application platforms obsolete.
+                    @Html.ActionLink("Read More", "CloudMigration", "Offerings")
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Business Analysis </h3>
+<p>
+    Developing business cases, eliciting business requirements, writing test cases, documenting business processes and carrying out Fit-Gap Analyses remain key to the success of software implementation projects.  Western Canada Business Technologies offers Business Analyses Services to Organizations enabling them to execute their projects with proper management of the triple threats factors – Time Lag, Scope Creep, and Budget Expansion.
+    @Html.ActionLink("Read More", "BusinessAnalysis", "Offerings")
+</p>            
+            </div>
+            <div class="col-md-6">
+                <h3>Applications Development and Web Hosting</h3>
+                <p>
+                    Change is expensive, especially when we have to restructure our core business processes to suite an out-of-the-box technology.  But, why would you change your business processes to suite technology when you can build applications that suite your business? Even if you prefer a ready-made Software Application you would need to make sure its features properly satisfy your business needs and objectives. WCBIZTECH is your best ally in this decision process.
+                    @Html.ActionLink("Read More", "ApplicationsDevelopment", "Offerings")
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <hr />
+            <p style="background-color: darkblue"><h4><i>Digital Transformation Success Stories</i></h4></p>
+            <hr />
+
+            <div class="col-md-6">
+                <img src="~/Images/Microsoft-5A.jpg" />
+                <figcaption class="col-md-offset-3"></figcaption>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Images/Microsoft-7A.jpg" />
+                <figcaption class="col-md-offset-3"></figcaption>
+            </div>
+        </div>
+        
+    </div>
+    
+        <div class="row col-md-12">
+            <hr />
+            <h4><i>Industry leaders innovating with Microsoft Digitial Technology Tools</i></h4>
+            <hr />
+            
+                <img src="~/Images/Cloudadopters.jpg" />
+                <figcaption class="col-md-offset-3">
+                    <p><i></i></p>
+                </figcaption>
+            </div>
+    </div>
+    
